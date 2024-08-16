@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Flamengo</title>
+    <link rel="shortcut icon" href="img/favicon-16x16.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+</head>
+<body>
+    <div class="cookie-button"><i class="fa-solid fa-cookie-bite"></i></div>
+    <div class="ajuda-fla"><img src="img/ajuda-flamengo.png" id="ajuda-fla" alt=""></div>
+    <header>
+        <nav>
+            <aside>
+                <div class="menu" id="menu" onclick="abrirMenu()">
+                    <span><i class="fa-solid fa-bars menu-bar"></i></span>
+                    <b id="menu-txt">Menu</b>
+                </div>
+                <div class="modal-menu" id="modal-menu">
+                    <div class="menu-aberto" id="menu-aberto">
+                        <div class="img-menu">
+                            <img src="img/menu-fla.png" alt="">
+                        </div>
+                        <ul>
+                            <li>Home</li>
+                            <li>Login</li>
+                            <span class="borda"></span>
+                            <li>Política de privacidade</li>
+                            <li>Política de cookies</li>
+                            <li>Decreto Rio</li>
+                            <li>Termo de compra</li>
+                            <li>Sobre a Eleven Tickets</li>
+                            <li>SAC</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="logo"><img src="img/logo-fla.png" alt="" id="logo"></div>
+            </aside>
+
+            <article>
+                <div class="idioma" onclick="abrirModal()">
+                    <img src="img/brasil.png" alt="">
+                    <i class="fa-solid fa-caret-down"></i>
+                </div>
+                <div class="login"><i class="fa-solid fa-user user"></i>Login</div>
+            </article>
+        </nav>
+    </header>
+    <div class="background"></div>
+    <main id="topo">
+        <div class="card">
+            <img src="img/brasileirao.png" id="brasileirao" alt="" style="width: 100%;">
+            <div class="container-card">
+                <h4>Campeonato brasileiro 2024</h4>
+                <p>Garanta já seus ingressos para os 
+                jogos do Flamengo no Campeonato Brasileiro 2024 agora!</p>
+                <button>COMPRAR / INFORMAÇÕES</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/libertadores.png" id="libertadores" alt="" style="width: 100%;">
+            <div class="container-card">
+                <h4>Copa libertadores da américa 2024</h4>
+                <p>Garanta já seus ingressos para os jogos do Flamengo no Campeonato Libertadores 2024 agora!</p>
+                <button>COMPRAR / INFORMAÇÕES</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/cdb.png" id="cdb" alt="" style="width: 100%;">
+            <div class="container-card">
+                <h4>Copa do Brasil 2024</h4>
+                <p>Garanta já seus ingressos para os jogos do Flamengo no Campeonato Copa do Brasil 2024 agora!
+                </p>
+                <button>COMPRAR / INFORMAÇÕES</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/pacotemaracana.png" id="maracanapc" alt="" style="width: 100%;">
+            <div class="container-card">
+                <h4>Pacote maracanã 2024</h4>
+                <p>Pacote maracanã 2024</p>
+                <button>COMPRAR / INFORMAÇÕES</button>
+            </div>
+        </div>
+        <div class="card">
+            <img src="img/museufla.png" id="museu-fla" alt="" style="width: 100%;">
+            <div class="container-card">
+                <h4>Museu Flamengo</h4>
+                <p>Adquira seu ingresso para o Museu do Flamengo.</p>
+                <button>COMPRAR / INFORMAÇÕES</button>
+            </div>
+        </div>
+    </main>    
+    
+
+    <footer>
+        <div class="infos">
+            <b>SAC</b>
+            <b>Política de privacidade</b>
+            <b>Política de cookies</b>
+            <b>Decreto Rio</b>
+
+            <b>Termo de compra</b>
+            <b>Sobre a Eleven Tickets</b>
+            <b>SAC</b>
+        </div>
+        <div class="patrocinios">
+            <img src="img/eleven.png" alt="">
+            <img src="img/imply.png" alt="">
+        </div>
+    </footer>
+    </div>
+    <script src="mobile.js"></script>
+    <script src="modal.js"></script>
+    <script src="menu.js"></script>
+    <script src="backtop.js"></script>
+
+    <div class="md-linguas" id="md-linguas">
+        <div class="linguas">
+            <div class="header">
+                <h1>Selecionar idioma</h1>
+                <i class="fa-solid fa-x" id="fechar"></i>
+            </div>  
+            <div class="flags">
+                <p><img src="img/brasil.png" alt=""></p>
+                <p><img src="img/espanha.png" alt=""></p>
+                <p><img src="img/usa.png" alt=""></p>
+            </div>
+        </div>
+    </div>
+
+    <a href="#topo"><div class="backtop" href="#topo" title="Voltar ao topo"><i class="fa-solid fa-caret-up"></i></div></a>
+</body>
+</html>
