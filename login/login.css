@@ -1,0 +1,266 @@
+.md-login{
+    display: none;
+}
+
+.md-login.active, .md-cadastro.active{
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    backdrop-filter: blur(10);
+    height: 100vh;
+    width: 100vw;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: 999999999;
+
+}
+
+.tela-login{
+    z-index: 9999999999;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 839px;
+    height: 642px;
+    animation: abrirLogin 0.3s;
+}
+
+.md-login.active .tela-login header{
+    background-color: rgb(161, 0, 0);
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #fff;    
+    height: 10%;
+    padding-left: 3%;
+    
+}
+
+.tela-login header img{
+    width: 45px;
+    height: 51.25px;
+    position: absolute;
+    left: 2%;
+}
+
+.tela-login header i{
+    position: absolute;
+    right: 5%;
+    font-size: 19px;
+    cursor: pointer;
+}
+
+.tela-login header h1{
+    font-size: 21px;
+    position: absolute;
+    left: 10%;
+}
+
+.tela-login main{
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: 40%;
+}
+
+.tela-login main i{
+    position: absolute;
+    left: 2.9%;
+    top: 3%;
+    cursor: pointer;
+    color: #d66d67;
+}
+
+.tela-login main p{
+    color: #000;
+    font-weight: bold;
+    font-size: 12px;
+    margin-top: -10px;
+}
+
+.tela-login main form{
+    display: flex;
+    flex-direction: column;
+    width: 50%;
+    position: absolute;
+    top: 40.5%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    gap: 5vh;
+
+}
+
+.tela-login main input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #999;
+    height: 30.5px;
+    padding: 10px 6px 3px 13px;
+    width: 75%;
+    font-size: 16px;
+}
+.input-login:focus,
+.input-login:valid{
+    border-bottom: 1px solid #c3291f;
+    background-color: #ffffffff;
+}
+
+.input-container{
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.label {
+    color: #999;
+    font-size: 16px;
+    position: absolute;
+    pointer-events: none;
+    left: 54.3px;
+    top: 16px; /* Ajustado para começar sobre o input */
+    transition: all 0.3s ease;
+}
+
+.input-login:focus ~ .label,
+.input-login:valid ~ .label{
+    top: -10px;
+    font-size: 14px;
+    color: #c3291f;
+}
+
+.tela-login main button{
+    position: absolute;
+    width: 69%;
+    font-size: 13px;
+    color: #fff;
+    padding: 10px;
+    border-radius: 5px;
+    border: none;
+    left: 50%;
+    top: 154%;
+    transform: translate(-50%);
+    background-color: #d66d67;
+    cursor: pointer;
+    transition: all ease-in-out 0.3s;
+}
+
+.fim{
+    background-color: #fff;
+    position: relative;
+    height: 10%;
+    display: flex;
+    justify-content: space-around;
+}
+
+.tela-login span{
+    color: #d66d67;
+    cursor: pointer;
+}
+
+form button:hover{
+    background-color: #d55049;
+}
+
+@keyframes abrirLogin{
+    from{
+        opacity: 0;
+        transform: scale(0);
+        top: 0%;
+        left: 0%;
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+}
+
+.input-login{
+    border: none;
+}
+
+.md-cadastro{
+    display: none;
+}
+
+.md-cadastro.active{
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    backdrop-filter: blur(10);
+    height: 100vh;
+    width: 100vw;
+    position: relative;
+    top: 0;
+    left: 0;
+    z-index: 9999999999999;
+}
+
+.tela-cadastro{
+    z-index: 99999999999999999999;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 401px;
+    height: 740px;
+    animation: abrirCadastro 0,3s;
+}
+
+.md-cadastro.active .tela-cadastro header{
+    background-color: rgb(161, 0, 0);
+    display: flex;
+    align-items: center;
+    position: relative;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    color: #fff;
+    height: 10%;
+    padding-left: 3%;
+}
+
+.tela-cadastro header i{
+    font-size: 14px;
+    position: absolute;
+    right: 5%;
+}
+
+.tela-cadastro header h1{
+    font-size: 21px;
+    position: absolute;
+    left: 10%;
+}
+
+.tela-cadastro main{
+    background-color: #fff;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    height: fit-content;
+}
+
+.tela-cadastro main input{
+    outline: none;
+    border: none;
+    border-bottom: 1px solid #999;
+    height: 30.5px;
+    padding: 10px 6px 3px 13px;
+    width: 75.10%;
+    font-size: 16px;
+}
+
+.label.cadastro{
+    color: #999;
+    font-size: 16px;
+    position: absolute;
+    left: 11.5%;
+    top: 16px;
+    transition: 0.3s ease;
+}
