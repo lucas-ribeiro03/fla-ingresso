@@ -1,0 +1,42 @@
+.input-container{
+    position: relative;
+    margin-top: 20px;
+}
+
+.input{
+    width: 100%;
+    padding: 10px 10px 10px 5px;
+    display: block;
+    border: none;
+    border-bottom: 1px solid #757575;
+    background: none;
+    outline: none;
+    font-size: 18px;
+    transition: all 0.3s ease;
+}
+
+.label {
+    color: #999;
+    font-size: 18px;
+    position: absolute;
+    pointer-events: none;
+    left: 5px;
+    top: 10px;
+    transition: all 0.3s ease;
+}
+
+.input:focus ~ .label{ 
+    top: -20px;
+    font-size: 14px;
+    color: #5264AE;
+}
+
+.input.has-value ~ .label {
+    top: -20px;
+    font-size: 14px;
+    color: #5264AE;
+}
+
+.input-login{
+    border: none;
+}
