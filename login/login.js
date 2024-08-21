@@ -2,8 +2,17 @@ function abrirLogin(){
     const cadastro = document.getElementById('md-cadastro');
     const login = document.getElementById('md-login');
     const btncadastro = document.getElementById('md-cadastro-btn');
+    var esc = 27;
     document.body.style.overflow = 'hidden';
     login.classList.add('active');
+
+    document.addEventListener('keydown', function(e) {
+        if (e.key === "Escape") {
+            login.classList.remove('active');
+            cadastro.classList.remove('active')
+        }
+    });
+    
 
     login.addEventListener('click', (evt) => {
         if (evt.target.id == 'fechar-login' || evt.target.id == 'md-login'){
