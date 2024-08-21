@@ -65,4 +65,4 @@ window.onload = function(){
         document.getElementById('login-link').innerText = 'Lucas Ribeiro';
         document.getElementById('login-link').href = 'minha-conta.html';
     }
-};  // Fechamento correto da função window.onload
+};
