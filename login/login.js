@@ -1,30 +1,32 @@
 function abrirLogin(){
-    const login = document.getElementById('md-login');
-    document.body.style.overflow = ('hidden');
-    login.classList.add('active');
-
-    login.addEventListener('click', (evt) =>{
-        if (evt.target.id == 'fechar' || evt.target.id == 'md-login'){
-            login.classList.remove('active');
-            document.body.style.overflow = '';
-            
-        }
-    })
-}
-
-function abrirCadastro(){
     const cadastro = document.getElementById('md-cadastro');
     const login = document.getElementById('md-login');
-    document.body.style.overflow = ('hidden');
-    login.classList.remove('active');
-    cadastro.classList.add('active');
+    const btncadastro = document.getElementById('md-cadastro-btn');
+    document.body.style.overflow = 'hidden';
+    login.classList.add('active');
 
+    login.addEventListener('click', (evt) => {
+        if (evt.target.id == 'fechar-login' || evt.target.id == 'md-login'){
+            login.classList.remove('active');
+            document.body.style.overflow = '';
+        } else if (evt.target == btncadastro){
+            cadastro.classList.add('active');
+            login.classList.remove('active');
+            document.body.style.overflow = ('hidden');
+        }
+    });
 
-
-    cadastro.addEventListener('click', (evt) => {
-        cadastro.classList.remove('active');
-    })
+    cadastro.addEventListener('click', (evet) => {
+        if(evet.target.id == 'fechar-cad' || evet.target.id == 'md-cadastro'){
+            cadastro.classList.remove('active');
+            login.classList.add('active');
+            document.body.style.overflow = 'hidden';
+        }
+    });
 }
+
+
+
 
 document.getElementById('login-form').addEventListener('submit', function(evt){
     evt.preventDefault();

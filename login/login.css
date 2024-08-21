@@ -2,7 +2,7 @@
     display: none;
 }
 
-.md-login.active, .md-cadastro.active{
+.md-login.active{
     background-color: rgba(0, 0, 0, 0.5);
     display: flex;
     backdrop-filter: blur(10);
@@ -11,12 +11,12 @@
     position: absolute;
     top: 0;
     left: 0;
-    z-index: 999999999;
+    z-index: 99;
 
 }
 
 .tela-login{
-    z-index: 9999999999;
+    z-index: 99999;
     position: fixed;
     top: 50%;
     left: 50%;
@@ -182,6 +182,31 @@ form button:hover{
     }
 }
 
+@keyframes fecharLogin{
+    from{
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    to{
+        opacity: 0;
+        transform: scale(0);
+    }
+}
+
+@keyframes abrirCadastro{
+    from{
+        opacity: 0;
+        transform: scale(0);
+    }
+
+    to{
+        opacity: 1;
+        transform: scale(1);
+        transform: translate(-50%, -50%);
+    }
+}
+
 .input-login{
     border: none;
 }
@@ -196,28 +221,33 @@ form button:hover{
     backdrop-filter: blur(10);
     height: 100vh;
     width: 100vw;
-    position: relative;
+    position: absolute;
     top: 0;
     left: 0;
-    z-index: 9999999999999;
+    z-index: 999999;
+    animation: fecharLogin 0.3s;
 }
 
+
+.form-cadastro{
+    position: relative;
+    top: -16%;
+}
 .tela-cadastro{
     z-index: 99999999999999999999;
-    position: fixed;
+    position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     width: 401px;
-    height: 740px;
-    animation: abrirCadastro 0,3s;
+    height: 739px;
+    animation: abrirCadastro 0.5s;
 }
 
 .md-cadastro.active .tela-cadastro header{
-    background-color: rgb(161, 0, 0);
+    background-color: #d66d67;;
     display: flex;
     align-items: center;
-    position: relative;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     color: #fff;
@@ -229,6 +259,7 @@ form button:hover{
     font-size: 14px;
     position: absolute;
     right: 5%;
+    cursor: pointer;
 }
 
 .tela-cadastro header h1{
@@ -243,7 +274,7 @@ form button:hover{
     display: flex;
     flex-direction: column;
     position: relative;
-    height: fit-content;
+    height: 400px;
 }
 
 .tela-cadastro main input{
@@ -251,7 +282,7 @@ form button:hover{
     border: none;
     border-bottom: 1px solid #999;
     height: 30.5px;
-    padding: 10px 6px 3px 13px;
+    padding: 10px 6px 3px 17px;
     width: 75.10%;
     font-size: 16px;
 }
@@ -263,4 +294,23 @@ form button:hover{
     left: 11.5%;
     top: 16px;
     transition: 0.3s ease;
+}
+
+.btn-cadastrar{
+    width: 136px;
+    height: 36px;
+    border-radius: 10px;
+    border: none;
+    color: #c2bcbc;
+    padding: 22p 22px 22px 22px;
+    margin-top: 10px;
+    position: absolute;
+    left: 50%;
+    top: 106%;
+    transform: translateX(-50%);
+}
+
+.btn-cadastrar:hover{
+    color: #fff;
+    cursor: pointer;
 }
